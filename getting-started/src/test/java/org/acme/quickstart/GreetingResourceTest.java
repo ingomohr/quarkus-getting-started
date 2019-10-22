@@ -13,6 +13,12 @@ public class GreetingResourceTest {
 	void helloEndpoint() {
 		given().when().get("/hello").then().statusCode(200).body(is("Hello"));
 	}
+	
+	@Test
+	void helloAsyncEndpoint() {
+		given().when().get("/hello/async").then().statusCode(200).body(is("Hello Async"));
+	}
+
 
 	@Test
 	void greetingsEndpoint() {
